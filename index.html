@@ -344,16 +344,36 @@ Lo recomiendo con total confianza.😊"</p>
                     <h2 class="fw-bold">¿Listo para empezar?</h2>
                     <p class="text-secondary">Contanos sobre tu proyecto y te responderemos en menos de 24hs.</p>
                 </div>
-                <form class="row g-3">
-                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Tu nombre"></div>
-                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Nombre de tu marca"></div>
-                    <div class="col-12"><input type="email" class="form-control" placeholder="Email profesional"></div>
+                <form action="https://formspree.io/f/xjgearkq" method="POST" class="row g-3">
+
+                    <div class="col-md-6">
+                        <input type="text" name="nombre" class="form-control" placeholder="Tu nombre" required>
+                    </div>
+                
+                    <div class="col-md-6">
+                        <input type="text" name="marca" class="form-control" placeholder="Nombre de tu marca">
+                    </div>
+                
                     <div class="col-12">
-                        <textarea class="form-control" rows="4" placeholder="¿Cómo podemos ayudarte?"></textarea>
+                        <input type="email" name="email" class="form-control" placeholder="Email profesional" required>
                     </div>
+                
+                    <div class="col-12">
+                        <textarea name="mensaje" class="form-control" rows="4" placeholder="¿Cómo podemos ayudarte?" required></textarea>
+                    </div>
+                
+                    <!-- Redirección opcional después de enviar -->
+                    <!-- Cambiá la URL por la tuya -->
+                    <!--
+                    <input type="hidden" name="_redirect" value="https://tusitio.com/gracias.html">
+                    -->
+                
                     <div class="col-12 mt-4">
-                        <button type="submit" class="btn btn-dark w-100 py-3">ENVIAR MENSAJE</button>
+                        <button type="submit" class="btn btn-dark w-100 py-3">
+                            ENVIAR MENSAJE
+                        </button>
                     </div>
+                
                 </form>
             </div>
         </div>
