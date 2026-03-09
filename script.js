@@ -1,64 +1,41 @@
-// Animación suave del Navbar al hacer scroll
-window.addEventListener('scroll', function() {
-    const nav = document.querySelector('.navbar-floating');
-    if (window.scrollY > 100) {
-        nav.style.width = '80%';
-        nav.style.top = '10px';
-        nav.style.boxShadow = '0 10px 30px rgba(0,0,0,0.05)';
-    } else {
-        nav.style.width = '90%';
-        nav.style.top = '20px';
-        nav.style.boxShadow = 'none';
-    }
-});
+  // Nav
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
 
-function loadMainVideo() {
-    const container = document.getElementById('mainPlayer');
-    // Reemplazamos el contenido por el iframe de YouTube con autoplay=1
-    container.innerHTML = `
-        <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/qQusOrcYdzs?autoplay=1" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-            </iframe>
-        </div>
-    `;
-    // Quitamos el onclick para que no se reinicie al hacer clic de nuevo
-    container.onclick = null;
-}
+  // Mobile menu
+  document.getElementById('menuBtn').addEventListener('click', () => document.getElementById('mobileMenu').classList.add('open'));
+  document.getElementById('menuClose').addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open'));
+  document.querySelectorAll('.ml').forEach(l => l.addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open')));
 
-// Lógica de aparición suave (Reveal Effect)
-document.addEventListener("DOMContentLoaded", function() {
-    const observerOptions = {
-        threshold: 0.15 // Se activa cuando el 15% del elemento es visible
-    };
+  // Video con autoplay real
+  function loadMainVideo() {
+    const iframe = document.getElementById('mainVideoIframe');
+    const thumb  = document.getElementById('videoThumbLayer');
+    iframe.src = "https://www.youtube.com/embed/qQusOrcYdzs?autoplay=1&rel=0&modestbranding=1";
+    thumb.classList.add('hidden');
+  }
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                // Una vez animado, dejamos de observarlo para mejorar rendimiento
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
+  // Reveal scroll
+  const revEls = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  revEls.forEach(el => obs.observe(el));
 
-    // Seleccionamos todos los elementos que queremos que "aparezcan"
-    const elementsToAnimate = document.querySelectorAll(
-        '.benefit-card, .method-card, .project-card, .section-padding h2, .form-container, .badge-pill'
-    );
-    
-    elementsToAnimate.forEach((el, index) => {
-        el.classList.add('reveal');
-        
-        // Aplicamos un pequeño delay automático a las tarjetas para que no salgan todas juntas
-        if(el.classList.contains('benefit-card') || el.classList.contains('method-card')) {
-            const delay = (index % 3) * 0.1; // Crea un efecto de cascada
-            el.style.transitionDelay = `${delay}s`;
-        }
-        
-        observer.observe(el);
-    });
-});
+  // Form
+  function handleSubmit(e) {
+    const btn = e.target;
+    btn.textContent = '✓ Mensaje enviado';
+    btn.style.background = 'var(--accent)';
+    btn.style.color = '#fff';
+    setTimeout(() => { btn.textContent = 'Enviar mensaje →'; btn.style.background = ''; btn.style.color = ''; }, 3500);
+  }
+
+  // Active nav
+  const allSecs = document.querySelectorAll('section[id]');
+  const allNavA = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    allSecs.forEach(s => { if (window.scrollY >= s.offsetTop - 130) cur = s.id; });
+    allNavA.forEach(l => l.style.color = l.getAttribute('href') === '#' + cur ? 'var(--white)' : '');
+  });

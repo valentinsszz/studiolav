@@ -1,405 +1,343 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudioLav | Creamos tu web a medida</title>
-    <meta name="description" content="Creamos páginas web modernas que convierten visitas en clientes. Diseño web profesional, landing pages y tiendas online con entrega rápida.">
-    <meta name="keywords" content="diseño web, paginas web, desarrollo web, tienda online, landing page, wordpress, ecommerce">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://studio-lav.com/">
-    <link rel="icon" type="image/png" href="source/favicon.png">
-
-    <!-- Open Graph (para redes sociales) -->
-    <meta property="og:title" content="StudioLav | Diseño de Páginas Web">
-    <meta property="og:description" content="Creamos páginas web que convierten visitas en clientes. Diseño moderno y rápido.">
-    <meta property="og:image" content="https://studio-lav.com/source/preview.jpg">
-    <meta property="og:url" content="https://studio-lav.com/">
-    <meta property="og:type" content="website">
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudioLav | Escalamos marcas de moda y estética</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet"/>
+  
 </head>
 <body>
 
-    <nav class="navbar-floating">
-        <div class="nav-content">
-            <img src="source/logostudiolav.png" alt="StudioLav" class="nav-logo">
-            <div class="nav-links d-none d-md-flex">
-                <a href="#beneficios">Beneficios</a>
-                <a href="#metodo">Procesos</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="#precios">Precios</a>
-            </div>
-            <a href="https://walink.co/95pea6" class="btn-nav">CONTACTARME</a>
-        </div>
-    </nav>
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo"><span class="studio">STUDIO</span><span class="lav">LAV</span></a>
+  <ul class="nav-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#proceso">Proceso</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#precios">Precios</a></li>
+    <li><a href="#contacto" class="nav-cta">Contactarme</a></li>
+  </ul>
+  <button class="nav-hamburger" id="menuBtn"><span></span><span></span><span></span></button>
+</nav>
 
-<section class="hero text-center" style="padding-top: 180px; padding-bottom: 80px;">
-    <div class="container">
-        <div class="badge-pill mb-3" style="padding: 10px 20px; font-size: 0.9rem;">
-            Cupos disponibles para este mes 🟢
-        </div>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="menuClose">✕</button>
+  <a href="#servicios" class="ml">Servicios</a>
+  <a href="#proceso" class="ml">Proceso</a>
+  <a href="#proyectos" class="ml">Proyectos</a>
+  <a href="#precios" class="ml">Precios</a>
+  <a href="#contacto" class="ml" style="color:var(--accent)">Contactar →</a>
+</div>
 
-        <h1 class="display-2 fw-bold mb-3">Webs diseñadas para vender<br><span class="text-muted">no para decorar.</span></h1>
-        
-        <p class="lead text-secondary mx-auto mb-5" style="max-width: 800px; font-size: 1.25rem;">
-            Convierte visitantes en clientes con webs funcionales, rápidos y pensados para vender.
-        </p>
-
-        <div class="d-flex justify-content-center gap-3 mb-5">
-            <a href="https://walink.co/95pea6" class="btn btn-dark btn-lg px-4 py-2" style="border-radius: 12px;">Agendar Llamada</a>
-            <a href="#reseñas" class="btn btn-outline-dark btn-lg px-4 py-2" style="border-radius: 12px;">Ver Casos</a>
-        </div>
-        
-        <div class="video-container-wrapper mx-auto mt-5" style="max-width: 950px;">
-            <div id="mainPlayer" class="video-main-wrapper shadow-2xl" onclick="loadMainVideo()" style="cursor: pointer; position: relative; border-radius: 20px; overflow: hidden; background: #000; transition: transform 0.3s ease;">
-                <div class="ratio ratio-16x9" id="videoContainer">
-                    <div id="videoPreview" style="background-image: url('source/miniaturayt.png'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
-                        
-                        <div class="play-button-minimal" style="font-size: 5rem; color: white; z-index: 2; transition: all 0.3s ease;">
-                            <i class="fa-solid fa-circle-play"></i>
-                        </div>
-                        
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.15);"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-badge"><div class="hero-badge-dot"></div>Exclusivo para marcas que quieran crecer</div>
+  <h1 class="hero-title">
+    Escalamos<br>
+    tu <span class="muted">negocio</span><br>
+    <span class="blue">cuidando</span><br>
+    tus ideas.
+  </h1>
+  <p class="hero-sub">Convertimos visitantes en clientes con webs funcionales, rápidas y pensadas para vender.</p>
+  <div class="hero-actions">
+    <a href="https://walink.co/95pea6" target="_blank" class="btn-primary">Agendar llamada</a>
+    <a href="#proyectos" class="btn-outline">Ver proyectos</a>
+  </div>
+  <div class="hero-stats">
+    <div class="hstat"><div class="hstat-num">+<span>50</span></div><div class="hstat-label">Proyectos entregados</div></div>
+    <div class="hstat"><div class="hstat-num"><span>100</span>%</div><div class="hstat-label">Satisfacción</div></div>
+    <div class="hstat"><div class="hstat-num"><span>24</span>h</div><div class="hstat-label">Tiempo de respuesta</div></div>
+  </div>
 </section>
 
-    
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="marquee-item"><span class="mq-dot"></span>Diseño Web</div>
+    <div class="marquee-item hi"><span class="mq-dot"></span>Landing Pages</div>
+    <div class="marquee-item"><span class="mq-dot"></span>SEO & Posicionamiento</div>
+    <div class="marquee-item"><span class="mq-dot"></span>Hosting & Dominio</div>
+    <div class="marquee-item hi"><span class="mq-dot"></span>E-commerce</div>
+    <div class="marquee-item"><span class="mq-dot"></span>WordPress</div>
+    <div class="marquee-item"><span class="mq-dot"></span>Estrategia Digital</div>
+    <div class="marquee-item hi"><span class="mq-dot"></span>Branding Digital</div>
+    <div class="marquee-item"><span class="mq-dot"></span>Diseño Web</div>
+    <div class="marquee-item hi"><span class="mq-dot"></span>Landing Pages</div>
+    <div class="marquee-item"><span class="mq-dot"></span>SEO & Posicionamiento</div>
+    <div class="marquee-item"><span class="mq-dot"></span>Hosting & Dominio</div>
+    <div class="marquee-item hi"><span class="mq-dot"></span>E-commerce</div>
+    <div class="marquee-item"><span class="mq-dot"></span>WordPress</div>
+    <div class="marquee-item"><span class="mq-dot"></span>Estrategia Digital</div>
+    <div class="marquee-item hi"><span class="mq-dot"></span>Branding Digital</div>
+  </div>
+</div>
 
-    <section id="beneficios" class="section-padding bg-light">
-    <div class="container">
-        <div class="row align-items-center g-5">
-            <div class="col-lg-5 text-center text-lg-start">
-                <div class="badge-pill mb-3">VALOR AGREGADO</div>
-                <h2 class="fw-bold display-5 mb-4">¿Por qué elegir StudioLav?</h2>
-                <p class="text-secondary mb-4">Construimos la infraestructura digital que tu marca necesita para escalar con autoridad y diseño premium.</p>
-                <a href="#contacto" class="btn btn-dark px-5 py-3 shadow-sm">EMPEZAR PROYECTO</a>
-            </div>
-
-            <div class="col-lg-7">
-                <div class="row g-4">
-                    <div class="col-md-6">
-                        <div class="benefit-card h-100">
-                            <div class="benefit-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                            <h6>Web a medida</h6>
-                            <p class="small text-muted mb-0">Analizamos tu diferencial para crear una web que atraiga a los clientes correctos.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="benefit-card h-100">
-                            <div class="benefit-icon"><i class="fa-solid fa-server"></i></div>
-                            <h6>Hosting y Dominio</h6>
-                            <p class="small text-muted mb-0">Gestionamos toda la infraestructura técnica por vos para que no te preocupes de nada.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="benefit-card h-100">
-                            <div class="benefit-icon"><i class="fa-solid fa-pen-nib"></i></div>
-                            <h6>Redacción estratégica</h6>
-                            <p class="small text-muted mb-0">Contenido adaptado para conectar emocionalmente con tu audiencia y vender.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="benefit-card h-100">
-                            <div class="benefit-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
-                            <h6>100% Adaptable</h6>
-                            <p class="small text-muted mb-0">Garantizamos una experiencia perfecta en celular, tablet y computadora.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="benefit-card h-100">
-                            <div class="benefit-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-                            <h6>Posicionamiento</h6>
-                            <p class="small text-muted mb-0">Aparecé en Google Maps y nuevas IA como ChatGPT cuando busquen tus servicios.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="benefit-card h-100">
-                            <div class="benefit-icon"><i class="fa-solid fa-sliders"></i></div>
-                            <h6>Autoadministrable</h6>
-                            <p class="small text-muted mb-0">Tomá el control: actualizá detalles y agregá contenido de forma sencilla.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- VIDEO -->
+<div id="video-hero">
+  <div class="reveal">
+    <p class="s-label center">Conocé StudioLav</p>
+    <h2 class="video-heading">Así trabajamos para <em>escalar tu marca</em></h2>
+  </div>
+  <div class="video-shell reveal" style="transition-delay:.1s">
+    <div class="video-ratio">
+      <iframe id="mainVideoIframe" src="" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+      <div class="video-thumb-layer" id="videoThumbLayer" onclick="loadMainVideo()">
+        <div class="play-pill">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          Ver video
         </div>
+      </div>
     </div>
+  </div>
+  <p class="video-caption reveal" style="transition-delay:.2s">Mirá cómo transformamos negocios con diseño web estratégico</p>
+</div>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="servicios-intro reveal">
+    <div>
+      <p class="s-label">¿Por qué elegirnos?</p>
+      <h2 class="s-heading">La infraestructura<br>digital que tu<br>marca <em>necesita</em></h2>
+    </div>
+    <div>
+      <p class="s-body">No usamos templates. Cada proyecto es único, pensado desde cero para tu negocio y tu audiencia. Webs que convierten.</p>
+      <div class="stats-mini">
+        <div class="smb"><div class="smb-num">200<span>$</span></div><div class="smb-label">Desde USD en landing pages</div></div>
+        <div class="smb"><div class="smb-num">7<span>d</span></div><div class="smb-label">Tiempo promedio de entrega</div></div>
+        <div class="smb"><div class="smb-num">∞</div><div class="smb-label">Revisiones incluidas</div></div>
+        <div class="smb"><div class="smb-num">3<span>x</span></div><div class="smb-label">Aumento promedio de conversión</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="benefit-grid reveal" style="transition-delay:.1s">
+    <div class="bitem"><div class="bnum">01</div><div class="bicon">✦</div><div class="bname">Web a medida</div><p class="bdesc">Analizamos tu diferencial y creamos un sitio que atrae al cliente correcto.</p></div>
+    <div class="bitem"><div class="bnum">02</div><div class="bicon">🖥</div><div class="bname">Hosting & Dominio</div><p class="bdesc">Gestión completa de la infraestructura técnica. Sin preocupaciones.</p></div>
+    <div class="bitem"><div class="bnum">03</div><div class="bicon">✍️</div><div class="bname">Redacción estratégica</div><p class="bdesc">Contenido que conecta emocionalmente y convierte visitas en ventas.</p></div>
+    <div class="bitem"><div class="bnum">04</div><div class="bicon">📱</div><div class="bname">100% Responsive</div><p class="bdesc">Experiencia perfecta en celular, tablet y computadora. Garantizado.</p></div>
+    <div class="bitem"><div class="bnum">05</div><div class="bicon">🔍</div><div class="bname">SEO & Google Maps</div><p class="bdesc">Aparecé en Google Maps y en IAs como ChatGPT cuando te busquen.</p></div>
+    <div class="bitem"><div class="bnum">06</div><div class="bicon">⚙️</div><div class="bname">Autoadministrable</div><p class="bdesc">Actualizá tu web de forma simple, sin necesitar un técnico.</p></div>
+  </div>
 </section>
 
-<section id="metodo" class="section-padding bg-light">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold h1">Nuestro Proceso de 4 Etapas</h2>
-                <p class="text-secondary">La hoja de ruta para llevar tu empresa a la era digital</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-3">
-                    <div class="method-card">
-                        <div class="step-num">01</div>
-                        <h5>Análisis y planificación</h5>
-                        <p class="small text-muted">Alineamos objetivos, estructura y funcionalidades desde el primer día.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="method-card">
-                        <div class="step-num">02</div>
-                        <h5>Diseño y desarrollo</h5>
-                        <p class="small text-muted">Creamos tu sitio en WordPress, optimizado, responsive y listo para convertir.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="method-card">
-                        <div class="step-num">03</div>
-                        <h5>Ajustes finales</h5>
-                        <p class="small text-muted">Implementamos ajustes y plugins de seguridad para proteger tu web.</p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="method-card">
-                        <div class="step-num">04</div>
-                        <h5>Recibis tu web</h5>
-                        <p class="small text-muted">Revisamos, ajustamos y dejamos tu web online y lista para usar.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-   <section id="reseñas" class="section-padding bg-white">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold h1">Lo que dicen nuestros clientes</h2>
-            <p class="text-secondary">Marcas que confiaron en nuestro sistema.</p>
-        </div>
-
-        <div class="row g-4 row-cols-1 row-cols-md-3 align-items-stretch">
-            
-            <div class="col">
-                <div class="method-card h-100 d-flex flex-column">
-                    <div class="d-flex mb-3 text-warning">★★★★★</div>
-                    <p class="mb-4 text-muted italic small">"Quiero recomendar el trabajo de Valentin, porque tuve una excelente experiencia. Siempre fue muy atento, responsable y comprometido con cada detalle. Supo entender perfectamente lo que necesitaba, una web funcional, atractiva y alineada con la identidad de mi empresa. Logró superar  todas mis expectativas, Sin dudas, un diseñador web altamente recomendable.
-Lo recomiendo con total confianza.😊"</p>
-                    <div class="d-flex align-items-center mt-auto">
-                        <div class="bg-light rounded-circle me-3" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 12px;">LP</div>
-                        <div>
-                            <h6 class="mb-0 fw-bold" style="font-size: 14px;">Lilia Puma</h6>
-                            <p class="small text-muted mb-0">CEO De BMConstructora</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="method-card h-100 d-flex flex-column">
-                    <div class="video-review-container mb-3">
-                        <div class="ratio ratio-16x9">
-                            <iframe src="https://www.youtube.com/embed/hIm65UQ195I" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <p class="mb-3 text-muted italic small">"Hizo lo que le pedi a medida, todo lo que le pedí lo cumplio"</p>
-                    <div class="d-flex align-items-center mt-auto">
-                        <div class="bg-dark text-white rounded-circle me-3" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 12px;">GR</div>
-                        <div>
-                            <h6 class="mb-0 fw-bold" style="font-size: 14px;">Gustavo Rodriguez</h6>
-                            <p class="small text-muted mb-0">InvoxSoluciones con IA</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="method-card h-100 d-flex flex-column">
-                    <div class="d-flex mb-3 text-warning">★★★★★</div>
-                    <p class="mb-4 text-muted italic small">"StudioLav entendio perfectamente el lenguaje visual de nuestra marca Linno y realizo un excelente trabajo"</p>
-                    <div class="d-flex align-items-center mt-auto">
-                        <div class="bg-light rounded-circle me-3" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 12px;">F</div>
-                        <div>
-                            <h6 class="mb-0 fw-bold" style="font-size: 14px;">Franco</h6>
-                            <p class="small text-muted mb-0">CEO de Linno</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+<!-- PROCESO -->
+<section id="proceso">
+  <div class="proceso-inner">
+    <div class="proceso-top reveal">
+      <div>
+        <p class="s-label">Cómo trabajamos</p>
+        <h2 class="s-heading">Proceso de<br>4 <em>etapas</em></h2>
+      </div>
+      <p>La hoja de ruta para llevar tu negocio a la era digital. Sin sorpresas, sin demoras.</p>
     </div>
+    <div class="steps-grid reveal" style="transition-delay:.1s">
+      <div class="scard"><div class="scard-bg">01</div><div class="scard-emoji">🎯</div><div class="scard-title">Análisis y planificación</div><p class="scard-body">Alineamos objetivos, estructura y funcionalidades desde el primer día.</p><span class="scard-arrow">→</span></div>
+      <div class="scard"><div class="scard-bg">02</div><div class="scard-emoji">🎨</div><div class="scard-title">Diseño y desarrollo</div><p class="scard-body">Creamos tu sitio optimizado, responsive y listo para convertir.</p><span class="scard-arrow">→</span></div>
+      <div class="scard"><div class="scard-bg">03</div><div class="scard-emoji">🔧</div><div class="scard-title">Ajustes finales</div><p class="scard-body">Revisiones, seguridad y optimización de velocidad incluidos.</p><span class="scard-arrow">→</span></div>
+      <div class="scard"><div class="scard-bg">04</div><div class="scard-emoji">🚀</div><div class="scard-title">Lanzamiento</div><p class="scard-body">Tu web online y lista para atraer clientes desde el día uno.</p><span class="scard-arrow">→</span></div>
+    </div>
+  </div>
 </section>
 
-    <section id="proyectos" class="section-padding bg-white">
-    <div class="container">
-        <div class="text-center">
-            <div class="badge-pill">PORTAFOLIO</div>
-            <h2 class="fw-bold h1">Proyectos Recientes</h2>
-            <p class="text-secondary">Sitios web diseñados para impactar y convertir.</p>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-6 col-lg-4">
-                <a href="https://invox-ai.com/" class="project-link">
-                    <div class="project-card">
-                        <div class="project-img-wrapper">
-                            <div class="project-image" style="background-image: url('source/invoxnuevo.jpg');"></div>
-                            <div class="project-overlay">
-                                <span>Ver sitio web <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></span>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h5 class="fw-bold">InvoxSoluciones</h5>
-                            <p class="small text-muted">Landing Page</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <a href="https://bmconstructora.com/" class="project-link">
-                    <div class="project-card">
-                        <div class="project-img-wrapper">
-                            <div class="project-image" style="background-image: url('source/bmnuevo.jpg');"></div>
-                            <div class="project-overlay">
-                                <span>Ver sitio web <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></span>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h5 class="fw-bold">BMConstructora</h5>
-                            <p class="small text-muted">Institucional / Construccion</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <a href="https://lino35.mitiendanube.com/" class="project-link">
-                    <div class="project-card">
-                        <div class="project-img-wrapper">
-                            <div class="project-image" style="background-image: url('source/linnonuevo.jpg');"></div>
-                            <div class="project-overlay">
-                                <span>Ver sitio web <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></span>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h5 class="fw-bold">Linno</h5>
-                            <p class="small text-muted">Tienda Online / Moda</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
+<!-- PROYECTOS -->
+<section id="proyectos">
+  <div class="proyectos-top reveal">
+    <div>
+      <p class="s-label">Portafolio</p>
+      <h2 class="s-heading">Proyectos <em>recientes</em></h2>
     </div>
+    <a href="https://walink.co/95pea6" target="_blank" class="btn-outline" style="white-space:nowrap;padding:.7rem 1.4rem;font-size:.76rem">Ver todos →</a>
+  </div>
+  <div class="projects-grid reveal" style="transition-delay:.1s">
+    <a href="https://invox-ai.com/" target="_blank" class="pjcard">
+      <div class="pjthumb"><div class="pjthumb-bg" style="background-image:url('source/invoxnuevo.jpg');background-color:#0d0d1a;"></div><div class="pjov"><span>Ver sitio ↗</span></div></div>
+      <div class="pjinfo"><p class="pjtag">Landing Page · IA</p><h3 class="pjname">InvoxSoluciones</h3></div>
+    </a>
+    <a href="https://bmconstructora.com/" target="_blank" class="pjcard">
+      <div class="pjthumb"><div class="pjthumb-bg" style="background-image:url('source/bmnuevo.jpg');background-color:#1a1810;"></div><div class="pjov"><span>Ver sitio ↗</span></div></div>
+      <div class="pjinfo"><p class="pjtag">Institucional · Construcción</p><h3 class="pjname">BMConstructora</h3></div>
+    </a>
+    <a href="https://lino35.mitiendanube.com/" target="_blank" class="pjcard">
+      <div class="pjthumb"><div class="pjthumb-bg" style="background-image:url('source/linnonuevo.jpg');background-color:#101520;"></div><div class="pjov"><span>Ver sitio ↗</span></div></div>
+      <div class="pjinfo"><p class="pjtag">Tienda Online · Moda</p><h3 class="pjname">Linno</h3></div>
+    </a>
+  </div>
 </section>
 
-    <section id="precios" class="section-padding bg-light">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold h1">Precios que se ajustan a tus necesidades</h2>
-                <p class="text-secondary">Encontrá la opción que mejor se adapte a tu negocio.</p>
+<!-- RESEÑAS -->
+<section id="reseñas">
+  <div class="reseñas-inner">
+    <div class="reseñas-top reveal">
+      <p class="s-label center">Testimonios</p>
+      <h2 class="s-heading" style="text-align:center">Lo que dicen<br><em>nuestros clientes</em></h2>
+    </div>
+    <div class="reviews-layout reveal" style="transition-delay:.1s">
+      <div>
+        <div class="rcard">
+          <div class="r-video">
+            <div class="r-video-ratio">
+              <iframe src="https://www.youtube.com/embed/ZdkzXJZggkU" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
             </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-4">
-                    <div class="method-card text-center border-0 shadow-sm">
-                        <h4 class="fw-bold">Landing Page</h4>
-                        <div class="display-5 fw-bold my-3">$ 200</div>
-                        <p class="small text-muted mb-4">Precio en dólares</p>
-                        <ul class="list-unstyled text-start mb-4">
-                            <li class="mb-2 small">✓ 1 página</li>
-                            <li class="mb-2 small">✓ Diseño personalizado</li>
-                            <li class="mb-2 small">✓ Autogestionable</li>
-                            <li class="mb-2 small">✓ 100% Responsive</li>
-                            <li class="mb-2 small">✓ WhatsApp o Formulario</li>
-                        </ul>
-                        <a href="https://walink.co/9sptuz" class="btn btn-dark w-100">Quiero mi web</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="method-card text-center border-dark shadow-lg" style="border-width: 2px !important;">
-                        <h4 class="fw-bold">Institucional</h4>
-                        <div class="display-5 fw-bold my-3">$ 300</div>
-                        <p class="small text-muted mb-4">Precio en dólares</p>
-                        <ul class="list-unstyled text-start mb-4">
-                            <li class="mb-2 small">✓ Hasta 5 Secciones</li>
-                            <li class="mb-2 small">✓ Diseño Personalizado</li>
-                            <li class="mb-2 small">✓ Autogestionable</li>
-                            <li class="mb-2 small">✓ 100% Responsive</li>
-                            <li class="mb-2 small">✓ SEO básico</li>
-                        </ul>
-                        <a href="https://walink.co/uqzyjy" class="btn btn-dark w-100">Quiero mi web</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="method-card text-center border-0 shadow-sm">
-                    <h4 class="fw-bold">Personalizada</h4>
-                        <div class="display-5 fw-bold my-3">$ 600</div>
-                        <p class="small text-muted mb-4">Precio en dólares</p>
-                        <ul class="list-unstyled text-start mb-4">
-                            <li class="mb-2 small">✓ Optimización de rendimiento</li>
-                            <li class="mb-2 small">✓ Tienda Online</li>
-                            <li class="mb-2 small">✓ Sitio Inmobiliario</li>
-                            <li class="mb-2 small">✓ 100% Responsive</li>
-                            <li class="mb-2 small">✓ Herramientas de medición</li>
-                        </ul>
-                        <a href="https://walink.co/9sptuz" class="btn btn-dark w-100">Quiero mi web</a>
-                    </div>
-                </div>
-            </div>
+          </div>
+          <p class="r-text">"En menos de 3 dias se interpreto perfectamente lo que necesitaba para la web."</p>
+          <div class="r-author"><div class="r-av">F</div><div><div class="r-name">Franco</div><div class="r-role">CEO · Linno</div></div></div>
         </div>
-    </section>
-
-    <section id="contacto" class="section-padding">
-        <div class="container">
-            <div class="form-container mx-auto">
-                <div class="text-center mb-5">
-                    <h2 class="fw-bold">¿Listo para empezar?</h2>
-                    <p class="text-secondary">Contanos sobre tu proyecto y te responderemos en menos de 24hs.</p>
-                </div>
-                <form action="https://formspree.io/f/xjgearkq" method="POST" class="row g-3">
-
-                    <div class="col-md-6">
-                        <input type="text" name="nombre" class="form-control" placeholder="Tu nombre" required>
-                    </div>
-                
-                    <div class="col-md-6">
-                        <input type="text" name="marca" class="form-control" placeholder="Nombre de tu marca">
-                    </div>
-                
-                    <div class="col-12">
-                        <input type="email" name="email" class="form-control" placeholder="Email profesional" required>
-                    </div>
-                
-                    <div class="col-12">
-                        <textarea name="mensaje" class="form-control" rows="4" placeholder="¿Cómo podemos ayudarte?" required></textarea>
-                    </div>
-                
-                    <!-- Redirección opcional después de enviar -->
-                    <!-- Cambiá la URL por la tuya -->
-                    <!--
-                    <input type="hidden" name="_redirect" value="https://tusitio.com/gracias.html">
-                    -->
-                
-                    <div class="col-12 mt-4">
-                        <button type="submit" class="btn btn-dark w-100 py-3">
-                            ENVIAR MENSAJE
-                        </button>
-                    </div>
-                
-                </form>
+      </div>
+      <div class="reviews-right-col">
+        <div class="rcard">
+          <div class="r-video">
+            <div class="r-video-ratio">
+              <iframe src="https://www.youtube.com/embed/hIm65UQ195I" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
             </div>
+          </div>
+          <p class="r-text">"Hizo lo que le pedí a medida, todo lo que le pedí lo cumplió."</p>
+          <div class="r-author"><div class="r-av">GR</div><div><div class="r-name">Gustavo Rodriguez</div><div class="r-role">InvoxSoluciones con IA</div></div></div>
         </div>
-    </section>
+      </div>
+    </div>
+    <div class="rcard accent" style="margin-top:1.5rem">
+      <div class="r-stars">★★★★★</div>
+      <p class="r-text">"Quiero recomendar el trabajo de Valentín, porque tuve una excelente experiencia. Siempre fue muy atento, responsable y comprometido con cada detalle. Supo entender perfectamente lo que necesitaba: una web funcional, atractiva y alineada con la identidad de mi empresa. Logró superar todas mis expectativas. Sin dudas, un diseñador web altamente recomendable."</p>
+      <div class="r-author"><div class="r-av" style="color:#000">LP</div><div><div class="r-name">Lilia Puma</div><div class="r-role">CEO · BMConstructora</div></div></div>
+    </div>
+  </div>
+</section>
 
+<!-- PRECIOS -->
+<section id="precios">
+  <div class="precios-top reveal">
+    <p class="s-label center">Precios</p>
+    <h2 class="s-heading" style="text-align:center">Planes para cada <em>negocio</em></h2>
+    <p style="color:var(--gray);margin-top:.8rem;font-size:.85rem">Todos los precios en USD · Cuotas disponibles</p>
+  </div>
+  <div class="pricing-grid reveal" style="transition-delay:.1s">
+    <div class="pccard">
+      <p class="pc-badge">Starter</p>
+      <h3 class="pc-name">Landing Page</h3>
+      <div class="pc-price"><sup>$</sup>200</div>
+      <p class="pc-currency">Precio en dólares · Pago único</p>
+      <div class="pc-div"></div>
+      <ul class="pc-list"><li>1 página optimizada</li><li>Diseño personalizado</li><li>Autogestionable</li><li>100% Responsive</li><li>WhatsApp o Formulario</li></ul>
+      <a href="https://walink.co/9sptuz" target="_blank" class="btn-pc btn-pc-o">Empezar →</a>
+    </div>
+    <div class="pccard featured">
+      <p class="pc-badge">Más popular</p>
+      <h3 class="pc-name">Institucional</h3>
+      <div class="pc-price"><sup>$</sup>350</div>
+      <p class="pc-currency">Precio en dólares · Pago único</p>
+      <div class="pc-div"></div>
+      <ul class="pc-list"><li>Hasta 5 secciones</li><li>Diseño premium personalizado</li><li>Autogestionable</li><li>100% Responsive</li><li>SEO básico incluido</li></ul>
+      <a href="https://walink.co/uqzyjy" target="_blank" class="btn-pc btn-pc-b">Quiero este plan →</a>
+    </div>
+    <div class="pccard">
+      <p class="pc-badge">Enterprise</p>
+      <h3 class="pc-name">Web a medida</h3>
+      <div class="pc-price"><sup>$</sup>500</div>
+      <p class="pc-currency">Precio en dólares · Personalizable</p>
+      <div class="pc-div"></div>
+      <ul class="pc-list"><li>Optimización de rendimiento</li><li>Tienda Online (e-commerce)</li><li>Sitio Inmobiliario</li><li>Herramientas de medición</li></ul>
+      <a href="https://walink.co/nwh8kb" target="_blank" class="btn-pc btn-pc-o">Agendar llamada →</a>
+    </div>
+  </div>
+</section>
 
-    <footer class="py-5 text-center border-top">
-        <img src="source/logostudiolav.png" height="25" class="mb-3">
-        <p class="text-muted small">© 2026 StudioLav Inc. Todos los derechos reservados.</p>
-    </footer>
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="contacto-inner">
+    <div class="reveal">
+      <p class="s-label">Contacto</p>
+      <h2 class="c-heading">¿Listo para<br><em>empezar?</em></h2>
+      <p class="c-body">Contanos sobre tu proyecto y te respondemos en menos de 24 horas hábiles. Sin compromisos.</p>
+      <div class="c-items">
+        <div class="c-item"><div class="c-icon">💬</div><div><strong>WhatsApp directo</strong><span>Respuesta garantizada en el día</span></div></div>
+        <div class="c-item"><div class="c-icon">⚡</div><div><strong>Respuesta en menos de 24hs</strong><span>Lunes a Sábado</span></div></div>
+        <div class="c-item"><div class="c-icon">🌍</div><div><strong>Trabajamos 100% remoto</strong><span>Con marcas de toda Latinoamérica</span></div></div>
+      </div>
+    </div>
+    <div class="form-box reveal" style="transition-delay:.15s">
+      <div class="fg-row">
+        <div class="fg"><label>Tu nombre</label><input type="text" placeholder="Ej: Juan García"/></div>
+        <div class="fg"><label>Tu marca</label><input type="text" placeholder="Ej: MiNegocio"/></div>
+      </div>
+      <div class="fg"><label>Email</label><input type="email" placeholder="tu@email.com"/></div>
+      <div class="fg"><label>Tipo de proyecto</label>
+        <select>
+          <option value="">Seleccioná una opción</option>
+          <option>Landing Page ($200)</option>
+          <option>Web Institucional ($300)</option>
+          <option>Web a medida ($600+)</option>
+          <option>No sé aún, necesito asesoría</option>
+        </select>
+      </div>
+      <div class="fg"><label>Contame tu proyecto</label><textarea placeholder="¿Qué necesitás? ¿Cuál es tu negocio?"></textarea></div>
+      <button class="btn-form" onclick="handleSubmit(event)">Enviar mensaje →</button>
+    </div>
+  </div>
+</section>
 
-    <script src="script.js"></script>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <a href="#" class="footer-logo"><span class="studio">STUDIO</span><span class="lav">LAV</span></a>
+        <p class="footer-tagline">Escalamos marcas de moda y estética con webs que convierten visitantes en clientes.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#proceso">Proceso</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#reseñas">Reseñas</a></li>
+            <li><a href="#precios">Precios</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="#precios">Landing Page</a></li>
+            <li><a href="#precios">Institucional</a></li>
+            <li><a href="#precios">E-commerce</a></li>
+            <li><a href="#precios">Web a medida</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://walink.co/95pea6" target="_blank">WhatsApp</a></li>
+            <li><a href="#contacto">Formulario</a></li>
+            <li><a href="#proyectos">Portafolio</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 StudioLav. Todos los derechos reservados.</p>
+      <div class="footer-social">
+        <a href="#" class="soc-btn" title="Instagram">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://walink.co/95pea6" target="_blank" class="soc-btn" title="WhatsApp">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://walink.co/95pea6" target="_blank" class="fab" title="WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="script.js"></script>
 </body>
 </html>
