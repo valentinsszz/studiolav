@@ -142,8 +142,8 @@
     .scard { padding: 2.5rem 1.8rem; border-right: 1px solid var(--border); position: relative; transition: background .3s; }
     .scard:last-child { border-right: none; }
     .scard:hover { background: var(--dark2); }
-    .scard-bg { font-size: 5rem; font-weight: 900; line-height: 1; color: rgba(255,255,255,.03); margin-bottom: .3rem; transition: color .3s; }
-    .scard:hover .scard-bg { color: rgba(0,194,255,.05); }
+    .scard-bg { font-size: 5rem; font-weight: 900; line-height: 1; color: rgba(255, 255, 255, 0.171); margin-bottom: .3rem; transition: color .3s; }
+    .scard:hover .scard-bg { color: rgba(0, 195, 255, 0.384); }
     .scard-emoji { font-size: 1.7rem; margin-bottom: 1.1rem; }
     .scard-title { font-size: 1rem; font-weight: 700; margin-bottom: .6rem; }
     .scard-body { font-size: .79rem; color: var(--gray); line-height: 1.75; }
