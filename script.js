@@ -18,39 +18,11 @@ function toggleFaq(el) {
   if (!isOpen) item.classList.add('open');
 }
 
-/* Scroll reveal with animation */
+/* Scroll reveal */
 const ro = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); } });
 }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
 document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
-
-/* Smooth Mouse Wheel Scroll */
-let currentScroll = 0;
-let targetScroll = 0;
-let isScrolling = false;
-
-function smoothScroll() {
-  currentScroll += (targetScroll - currentScroll) * 0.08;
-  
-  if (Math.abs(targetScroll - currentScroll) > 0.5) {
-    window.scrollTo(0, currentScroll);
-    isScrolling = true;
-    requestAnimationFrame(smoothScroll);
-  } else {
-    currentScroll = targetScroll;
-    isScrolling = false;
-  }
-}
-
-window.addEventListener('wheel', (e) => {
-  e.preventDefault();
-  targetScroll = Math.max(0, Math.min(targetScroll + e.deltaY, document.documentElement.scrollHeight - window.innerHeight));
-  
-  if (!isScrolling) {
-    currentScroll = window.scrollY;
-    smoothScroll();
-  }
-}, { passive: false });
 
 /* Smooth scroll with nav offset */
 document.querySelectorAll('a[href^="#"]').forEach(a => {

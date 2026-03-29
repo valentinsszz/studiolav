@@ -85,7 +85,7 @@ nav {
 .hero-stat-num { font-family:'Barlow',sans-serif; font-size:clamp(28px,4vw,42px); font-weight:900; letter-spacing:-0.04em; line-height:1; text-align:center; }
 .hero-stat-label { font-size:13px; color:var(--text-muted); margin-top:4px; text-align:center; }
 .hero-marquee-wrap { overflow:hidden; margin-top:clamp(32px,5vw,60px); mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent); -webkit-mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent); }
-.hero-marquee { display:flex; animation:marquee 24s linear infinite; width:max-content; }
+.hero-marquee { display:flex; animation:marquee 48s linear infinite; width:max-content; }
 .hero-marquee img { height:clamp(44px,6vw,60px); width:auto; aspect-ratio:16/7; object-fit:cover; object-position:top; border-radius:8px; margin-right:12px; border:1px solid var(--border); flex-shrink:0; }
 @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
