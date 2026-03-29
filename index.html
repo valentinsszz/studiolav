@@ -1,523 +1,403 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>StudioLav — Tu negocio puede vender solo</title>
-<link rel="icon" type="image/png" href="favicon.png" />
-<meta property="og:title" content="StudioLav — Tu negocio puede vender solo" />
-<meta property="og:description" content="Creamos sitios web y tiendas online que organizan tu negocio, automatizan consultas con IA y muestran tu marca de forma profesional." />
-<meta property="og:image" content="preview.jpg" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="preview.jpg" />
-<link rel="stylesheet" href="style.css" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700;1,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+
+</style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
-  <a href="#" class="nav-logo"><img src="source/logostudiolav.png" alt="StudioLav" class="nav-logo-img" /></a>
+<nav id="nav">
+  <a href="#" class="nav-logo">STUDIOLAV</a>
   <ul class="nav-links">
-    <li><a href="#tiendas">Tiendas</a></li>
-    <li><a href="#servicios">Servicios</a></li>
-    <li><a href="#solucion">Solución</a></li>
     <li><a href="#portfolio">Proyectos</a></li>
-    <li><a href="#testimonios">Reseñas</a></li>
-    <li><a href="#precios">Precios</a></li>
+    <li><a href="#process">Proceso</a></li>
+    <li><a href="#services">Servicios</a></li>
+    <li><a href="#pricing">Precios</a></li>
+    <li><a href="#testimonials">Reseñas</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
-  <a href="https://walink.co/95pea6" target="_blank" class="nav-cta">Solicitar web →</a>
+  <a href="https://walink.co/95pea6" class="nav-cta">Hablemos →</a>
+  <button class="nav-burger" id="burger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="#portfolio"    onclick="closeMobile()">Proyectos</a>
+  <a href="#process"      onclick="closeMobile()">Proceso</a>
+  <a href="#services"     onclick="closeMobile()">Servicios</a>
+  <a href="#pricing"      onclick="closeMobile()">Precios</a>
+  <a href="#testimonials" onclick="closeMobile()">Reseñas</a>
+  <a href="#faq"          onclick="closeMobile()">FAQ</a>
+  <a href="https://walink.co/95pea6" class="nav-mobile-cta">Hablemos →</a>
+</div>
 
-<!-- 1. HERO -->
-<section id="hero">
-  <div class="container">
-    <div class="hero-grid">
-      <div>
-        <div class="hero-badge"><span class="badge-dot"></span>IA integrada en tu sitio</div>
-        <h1>Tu negocio puede<br>vender y atender<br><em>automáticamente.</em></h1>
-        <p class="hero-sub">Creamos sitios web y tiendas online que organizan tu negocio, automatizan consultas con inteligencia artificial y muestran tu marca de forma profesional.</p>
-        <div class="hero-bullets">
-          <div class="hero-bullet"><span class="check-icon">✔</span>Automatizá consultas con IA</div>
-          <div class="hero-bullet"><span class="check-icon">✔</span>Vendé online sin depender de WhatsApp</div>
-          <div class="hero-bullet"><span class="check-icon">✔</span>Mostrá tu negocio de forma profesional</div>
-        </div>
-        <div class="hero-actions">
-          <a href="https://walink.co/95pea6" target="_blank" class="btn-primary">Ver cómo funciona →</a>
-          <a href="#precios" class="btn-ghost">Ver precios ↓</a>
-        </div>
+<!-- HERO -->
+<section class="hero">
+
+  <!-- Graphic background lines -->
+  <div class="hero-bg-lines" aria-hidden="true">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- Soft radial mask: transparent center, fades to visible at edges -->
+        <radialGradient id="lineMask" cx="50%" cy="45%" r="62%" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="white" stop-opacity="0"/>
+          <stop offset="55%" stop-color="white" stop-opacity="0.3"/>
+          <stop offset="100%" stop-color="white" stop-opacity="1"/>
+        </radialGradient>
+        <mask id="heroLineMask">
+          <rect width="1440" height="900" fill="url(#lineMask)"/>
+        </mask>
+      </defs>
+
+      <!-- Horizontal lines -->
+      <g mask="url(#heroLineMask)" stroke="#0a0a0a" stroke-width="0.6" opacity="0.07">
+        <line x1="0" y1="90"  x2="1440" y2="90"/>
+        <line x1="0" y1="180" x2="1440" y2="180"/>
+        <line x1="0" y1="270" x2="1440" y2="270"/>
+        <line x1="0" y1="360" x2="1440" y2="360"/>
+        <line x1="0" y1="450" x2="1440" y2="450"/>
+        <line x1="0" y1="540" x2="1440" y2="540"/>
+        <line x1="0" y1="630" x2="1440" y2="630"/>
+        <line x1="0" y1="720" x2="1440" y2="720"/>
+        <line x1="0" y1="810" x2="1440" y2="810"/>
+      </g>
+
+      <!-- Vertical lines -->
+      <g mask="url(#heroLineMask)" stroke="#0a0a0a" stroke-width="0.6" opacity="0.07">
+        <line x1="144"  y1="0" x2="144"  y2="900"/>
+        <line x1="288"  y1="0" x2="288"  y2="900"/>
+        <line x1="432"  y1="0" x2="432"  y2="900"/>
+        <line x1="576"  y1="0" x2="576"  y2="900"/>
+        <line x1="720"  y1="0" x2="720"  y2="900"/>
+        <line x1="864"  y1="0" x2="864"  y2="900"/>
+        <line x1="1008" y1="0" x2="1008" y2="900"/>
+        <line x1="1152" y1="0" x2="1152" y2="900"/>
+        <line x1="1296" y1="0" x2="1296" y2="900"/>
+      </g>
+
+      <!-- Diagonal accent lines — top-left corner -->
+      <g stroke="#0a0a0a" stroke-width="0.5" opacity="0.045">
+        <line x1="-80" y1="0"   x2="320"  y2="900"/>
+        <line x1="80"  y1="0"   x2="480"  y2="900"/>
+        <line x1="240" y1="0"   x2="640"  y2="900"/>
+        <line x1="400" y1="0"   x2="800"  y2="900"/>
+        <!-- diagonal from right -->
+        <line x1="1520" y1="0"  x2="1120" y2="900"/>
+        <line x1="1360" y1="0"  x2="960"  y2="900"/>
+        <line x1="1200" y1="0"  x2="800"  y2="900"/>
+        <line x1="1040" y1="0"  x2="640"  y2="900"/>
+      </g>
+
+      <!-- Accent highlight: a faint blue glow top-right -->
+      <ellipse cx="1200" cy="80" rx="340" ry="120" fill="#3b82f6" opacity="0.06"/>
+      <!-- Accent glow bottom-left -->
+      <ellipse cx="180" cy="820" rx="260" ry="100" fill="#3b82f6" opacity="0.05"/>
+    </svg>
+  </div>
+
+  <div>
+    <div class="hero-badge">Cupos disponibles para este mes</div>
+    <h1>Tu negocio puede<br>vender <em>automáticamente.</em></h1>
+    <p class="hero-sub">Creamos sitios web y tiendas online que organizan tu negocio, automatizan consultas con inteligencia artificial y muestran tu marca de forma profesional.</p>
+    <div class="hero-actions">
+      <a href="https://walink.co/95pea6" class="btn-primary">Solicitar mi web →</a>
+      <a href="#pricing" class="btn-secondary">Ver precios ↓</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="hero-stat-num">+50</div><div class="hero-stat-label">Proyectos entregados</div></div>
+      <div><div class="hero-stat-num">7d</div><div class="hero-stat-label">Entrega promedio</div></div>
+      <div><div class="hero-stat-num">24h</div><div class="hero-stat-label">Tiempo de respuesta</div></div>
+      <div><div class="hero-stat-num">100%</div><div class="hero-stat-label">Clientes satisfechos</div></div>
+    </div>
+  </div>
+  <div class="hero-marquee-wrap">
+    <div class="hero-marquee">
+      <img src="https://studio-lav.com/source/invoxnuevo.jpg" alt="Invox">
+      <img src="https://studio-lav.com/source/bmnuevo.jpg" alt="BM Constructora">
+      <img src="https://studio-lav.com/source/linnonuevo.jpg" alt="Linno">
+      <img src="https://framerusercontent.com/images/aFgDF7hlNkukxkvFYElmq7qRaY0.jpg" alt="Proyecto 4">
+      <img src="https://studio-lav.com/source/invoxnuevo.jpg" alt="Invox">
+      <img src="https://studio-lav.com/source/bmnuevo.jpg" alt="BM Constructora">
+      <img src="https://studio-lav.com/source/linnonuevo.jpg" alt="Linno">
+      <img src="https://framerusercontent.com/images/aFgDF7hlNkukxkvFYElmq7qRaY0.jpg" alt="Proyecto 4">
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+  <div class="portfolio-header">
+    <div>
+      <p class="section-label">Nuestros proyectos</p>
+      <h2 class="section-title">Trabajos que hablan<br><em>por sí solos.</em></h2>
+    </div>
+    <a href="https://walink.co/95pea6" class="portfolio-link">Iniciar tu proyecto →</a>
+  </div>
+  <div class="portfolio-featured reveal">
+    <a href="https://invox-ai.com/" target="_blank" rel="noopener" class="project-card project-card-large">
+      <img src="https://studio-lav.com/source/invoxnuevo.jpg" alt="InvoxSoluciones" loading="lazy">
+      <div class="project-card-info">
+        <span class="project-tag">Landing Page · IA</span>
+        <div class="project-title">InvoxSoluciones</div>
+        <p class="project-desc">Landing page para empresa de soluciones con IA. Diseño oscuro, moderno y orientado a conversión.</p>
+        <span class="project-arrow">Ver sitio ↗</span>
       </div>
-      <div class="hero-card">
-        <p class="card-tag">Resultado real</p>
-        <div class="ba-grid">
-          <div class="ba-col ba-before">
-            <p class="ba-head">Antes</p>
-            <div class="ba-item">😤 WhatsApp saturado</div>
-            <div class="ba-item">🔁 Consultas repetidas</div>
-            <div class="ba-item">📋 Procesos manuales</div>
-            <div class="ba-item">🕐 Atado a tu horario</div>
-          </div>
-          <div class="ba-col ba-after">
-            <p class="ba-head">Después</p>
-            <div class="ba-item">🤖 Consultas automatizadas</div>
-            <div class="ba-item">🛒 Ventas organizadas</div>
-            <div class="ba-item">✨ Presencia profesional</div>
-            <div class="ba-item">🌙 Funciona 24/7</div>
-          </div>
-        </div>
-        <div class="hero-stats">
-          <div class="stat"><span class="stat-num">+50</span><span class="stat-lbl">Proyectos</span></div>
-          <div class="stat"><span class="stat-num">24h</span><span class="stat-lbl">Respuesta</span></div>
-          <div class="stat"><span class="stat-num">100%</span><span class="stat-lbl">Satisfacción</span></div>
-        </div>
+    </a>
+    <a href="https://bmconstructora.com/" target="_blank" rel="noopener" class="project-card project-card-large">
+      <img src="https://studio-lav.com/source/bmnuevo.jpg" alt="BMConstructora" loading="lazy">
+      <div class="project-card-info">
+        <span class="project-tag">Institucional · Construcción</span>
+        <div class="project-title">BMConstructora</div>
+        <p class="project-desc">Sitio institucional para constructora. Presencia profesional, servicios y contacto integrados.</p>
+        <span class="project-arrow">Ver sitio ↗</span>
+      </div>
+    </a>
+    <a href="https://lino35.mitiendanube.com/" target="_blank" rel="noopener" class="project-card project-card-large">
+      <img src="https://studio-lav.com/source/linnonuevo.jpg" alt="Linno" loading="lazy">
+      <div class="project-card-info">
+        <span class="project-tag">E-commerce · Moda</span>
+        <div class="project-title">Linno</div>
+        <p class="project-desc">Tienda online con catálogo, carrito y pagos integrados.</p>
+        <span class="project-arrow">Ver sitio ↗</span>
+      </div>
+    </a>
+    <div class="project-card project-card-large">
+      <img src="https://framerusercontent.com/images/aFgDF7hlNkukxkvFYElmq7qRaY0.jpg" alt="Proyecto 04" loading="lazy">
+      <div class="project-card-info">
+        <span class="project-tag">Sitio Corporativo</span>
+        <div class="project-title">Proyecto 04</div>
+        <p class="project-desc">Diseño personalizado enfocado en conversión.</p>
+      </div>
+    </div>
+    <div class="portfolio-cta-card">
+      <div class="portfolio-cta-num">+50</div>
+      <p class="portfolio-cta-text">Proyectos entregados<br>en toda Latinoamérica</p>
+      <a href="https://walink.co/95pea6" class="btn-primary" style="font-size:13px;padding:11px 22px;background:var(--accent);color:var(--white);">Sumá el tuyo →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <p class="section-label reveal">Proceso</p>
+  <h2 class="section-title reveal">Nuestro proceso en<br><em>3 simples pasos.</em></h2>
+  <div class="process-steps">
+    <div class="process-step reveal">
+      <div class="step-number">01</div>
+      <div class="step-title">Análisis y planificación</div>
+      <p class="step-desc">Alineamos objetivos, estructura y funcionalidades desde el primer día. Entendemos tu negocio antes de escribir una sola línea de código.</p>
+    </div>
+    <div class="process-step reveal reveal-delay-1">
+      <div class="step-number">02</div>
+      <div class="step-title">Diseño y desarrollo</div>
+      <p class="step-desc">Creamos tu sitio optimizado, responsive y listo para convertir. Diseño premium personalizado, adaptado a tu marca e identidad.</p>
+    </div>
+    <div class="process-step reveal reveal-delay-2">
+      <div class="step-number">03</div>
+      <div class="step-title">Recibís tu web</div>
+      <p class="step-desc">Revisamos, ajustamos y dejamos tu web online y lista para usar. Te entregamos un sistema que trabaja para vos las 24 horas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section id="benefits">
+  <p class="section-label reveal">Beneficios</p>
+  <h2 class="section-title reveal">¿Qué obtenés<br><em>con nosotros?</em></h2>
+  <p style="color:var(--text-muted);font-size:clamp(15px,2vw,17px);margin-top:12px;max-width:48ch;" class="reveal">Un servicio integral enfocado en resultados, con acompañamiento real en cada etapa.</p>
+  <div class="benefits-grid">
+    <div class="benefit-card reveal"><div class="benefit-icon">🎯</div><div class="benefit-title">Web a medida</div><p class="benefit-desc">Analizamos tu negocio para crear una web que atraiga a los clientes correctos, no una plantilla genérica.</p></div>
+    <div class="benefit-card reveal reveal-delay-1"><div class="benefit-icon">🤖</div><div class="benefit-title">IA para consultas</div><p class="benefit-desc">Tu web responde preguntas frecuentes, explica servicios y guía al cliente — incluso fuera de horario.</p></div>
+    <div class="benefit-card reveal reveal-delay-2"><div class="benefit-icon">✏️</div><div class="benefit-title">Redacción estratégica</div><p class="benefit-desc">Nada de copiar y pegar. Adaptamos tu contenido para que conecte con tu audiencia y genere acción.</p></div>
+    <div class="benefit-card reveal"><div class="benefit-icon">📱</div><div class="benefit-title">100% Responsive</div><p class="benefit-desc">Tu web perfecta en celular, tablet y computadora. Donde hoy está la mayoría de las visitas.</p></div>
+    <div class="benefit-card reveal reveal-delay-1"><div class="benefit-icon">📈</div><div class="benefit-title">Posicionamiento SEO</div><p class="benefit-desc">Atraé personas de tu ciudad que buscan tus servicios en Google, Google Maps y ChatGPT.</p></div>
+    <div class="benefit-card reveal reveal-delay-2"><div class="benefit-icon">⚙️</div><div class="benefit-title">Autoadministrable</div><p class="benefit-desc">Actualizá textos, cambiá detalles y agregá contenido de forma sencilla, sin depender de nadie.</p></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <p class="section-label reveal">Servicios</p>
+  <h2 class="section-title reveal">Soluciones digitales<br><em>en un solo lugar.</em></h2>
+  <div class="services-grid">
+    <div class="service-item reveal"><span class="service-icon">🖼️</span><div class="service-name">Edición de imágenes</div><p class="service-desc">Imágenes profesionales, coherentes con tu marca y listas para web.</p></div>
+    <div class="service-item reveal reveal-delay-1"><span class="service-icon">📱</span><div class="service-name">Responsive</div><p class="service-desc">Tu sitio perfecto en celulares, donde se genera la mayoría de las visitas.</p></div>
+    <div class="service-item reveal reveal-delay-2"><span class="service-icon">💬</span><div class="service-name">Integración con Redes</div><p class="service-desc">WhatsApp y redes sociales conectados para facilitar el contacto.</p></div>
+    <div class="service-item reveal reveal-delay-3"><span class="service-icon">📋</span><div class="service-name">Formularios optimizados</div><p class="service-desc">Formularios que captan datos útiles y ordenan contactos sin fricción.</p></div>
+    <div class="service-item reveal"><span class="service-icon">🔒</span><div class="service-name">Seguridad y respaldo</div><p class="service-desc">Medidas de seguridad y backups automáticos para proteger tu web.</p></div>
+    <div class="service-item reveal reveal-delay-1"><span class="service-icon">📝</span><div class="service-name">Carga de contenidos</div><p class="service-desc">Contenido organizado con coherencia visual, fácil de leer y actualizar.</p></div>
+    <div class="service-item reveal reveal-delay-2"><span class="service-icon">🔄</span><div class="service-name">Actualizaciones y soporte</div><p class="service-desc">Sitio actualizado y funcionando, sin que te preocupes por errores.</p></div>
+    <div class="service-item reveal reveal-delay-3"><span class="service-icon">📊</span><div class="service-name">Herramientas de medición</div><p class="service-desc">Análisis de visitas, comportamiento y resultados en tiempo real.</p></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <p class="section-label reveal">Reseñas</p>
+  <h2 class="section-title reveal">Lo que dicen los que<br><em>ya confiaron.</em></h2>
+
+  <!-- 4 text cards -->
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"En menos de 3 días se interpretó perfectamente lo que necesitaba. Rápido, preciso y al punto."</p>
+      <div class="testimonial-author"><div class="testimonial-avatar">F</div><div><div class="testimonial-name">Franco</div><div class="testimonial-role">CEO · Linno</div></div></div>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-1">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Hizo lo que le pedí a medida, todo lo que le pedí lo cumplió. Muy buena experiencia de principio a fin."</p>
+      <div class="testimonial-author"><div class="testimonial-avatar">G</div><div><div class="testimonial-name">Gustavo Rodriguez</div><div class="testimonial-role">InvoxSoluciones con IA</div></div></div>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-2">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Valentín fue muy atento y comprometido con cada detalle. Logró superar todas mis expectativas."</p>
+      <div class="testimonial-author"><div class="testimonial-avatar">L</div><div><div class="testimonial-name">Lilia Puma</div><div class="testimonial-role">CEO · BMConstructora</div></div></div>
+    </div>
+    <!-- 4th text-only card -->
+    <div class="testimonial-card reveal reveal-delay-3">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"La web quedó exactamente como la imaginé. El proceso fue claro y los tiempos se cumplieron al 100%."</p>
+      <div class="testimonial-author"><div class="testimonial-avatar">M</div><div><div class="testimonial-name">Martina Sosa</div><div class="testimonial-role">Emprendedora · Buenos Aires</div></div></div>
+    </div>
+  </div>
+
+  <!-- Video testimonials -->
+  <div class="video-section-label reveal">Testimonios en video</div>
+  <div class="video-grid">
+    <div class="video-card reveal" onclick="openVideo('https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
+      <div class="video-thumb">
+        <img src="https://studio-lav.com/source/linnonuevo.jpg" alt="Franco — Linno" loading="lazy">
+        <div class="video-play"></div>
+      </div>
+      <div class="video-info">
+        <div class="video-stars">★★★★★</div>
+        <p class="video-quote">"En menos de 3 días todo listo. Superó mis expectativas completamente."</p>
+        <div class="video-author"><div class="video-avatar">F</div><div><div class="video-name">Franco</div><div class="video-role">CEO · Linno</div></div></div>
+      </div>
+    </div>
+    <div class="video-card reveal reveal-delay-1" onclick="openVideo('https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
+      <div class="video-thumb">
+        <img src="https://studio-lav.com/source/invoxnuevo.jpg" alt="Gustavo — Invox" loading="lazy">
+        <div class="video-play"></div>
+      </div>
+      <div class="video-info">
+        <div class="video-stars">★★★★★</div>
+        <p class="video-quote">"Hizo exactamente lo que pedí. Muy buena experiencia de principio a fin."</p>
+        <div class="video-author"><div class="video-avatar">G</div><div><div class="video-name">Gustavo Rodriguez</div><div class="video-role">InvoxSoluciones con IA</div></div></div>
+      </div>
+    </div>
+    <div class="video-card reveal reveal-delay-2" onclick="openVideo('https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
+      <div class="video-thumb">
+        <img src="https://studio-lav.com/source/bmnuevo.jpg" alt="Lilia — BMConstructora" loading="lazy">
+        <div class="video-play"></div>
+      </div>
+      <div class="video-info">
+        <div class="video-stars">★★★★★</div>
+        <p class="video-quote">"Comprometido con cada detalle. Superó todas mis expectativas."</p>
+        <div class="video-author"><div class="video-avatar">L</div><div><div class="video-name">Lilia Puma</div><div class="video-role">CEO · BMConstructora</div></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 2. PROBLEMAS TIENDAS -->
-<section id="tiendas" class="problems-section">
-  <div class="container">
-    <div class="section-header">
-      <p class="label">Negocios con productos</p>
-      <h2>Si vendés productos,<br><em>probablemente te pase esto.</em></h2>
-      <p class="section-desc">La misma conversación, todos los días. Clientes que preguntan y desaparecen. Pedidos copiados a mano desde WhatsApp.</p>
+<!-- Video modal -->
+<div class="video-modal" id="video-modal" onclick="closeVideoOnOverlay(event)">
+  <div class="video-modal-inner">
+    <button class="video-modal-close" onclick="closeVideo()">×</button>
+    <iframe id="video-iframe" src="" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+  </div>
+</div>
+
+<!-- PRICING -->
+<section id="pricing">
+  <p class="section-label reveal">Precios</p>
+  <h2 class="section-title reveal">Planes para cada<br><em>negocio.</em></h2>
+  <p style="color:var(--text-muted);font-size:15px;margin-top:10px;" class="reveal">Todos los precios en USD · Cuotas disponibles · Pago único</p>
+  <div class="pricing-grid">
+    <div class="pricing-card reveal">
+      <div class="pricing-plan">Landing Page</div>
+      <div class="pricing-price"><sup>$</sup>200</div>
+      <p class="pricing-note">Pago único · Cuotas disponibles</p>
+      <ul class="pricing-features"><li>1 página diseñada</li><li>Diseño personalizado</li><li>Autogestionable</li><li>100% Responsive</li><li>WhatsApp o Formulario</li></ul>
+      <a href="https://walink.co/wsxis5" class="pricing-cta pricing-cta-outline">Quiero este plan</a>
     </div>
-    <div class="problems-grid">
-      <div class="problem-card reveal">
-        <span class="problem-icon">💬</span>
-        <span class="problem-tag">Pérdida de tiempo</span>
-        <p class="problem-title">Respondés las mismas preguntas todo el tiempo</p>
-        <p class="problem-text">La misma conversación se repite con cada cliente nuevo. Siempre las mismas dudas, siempre el mismo esfuerzo.</p>
-        <div class="problem-quote">"¿Tenés stock?" · "¿Cuánto sale?" · "¿Qué talles hay?"</div>
-      </div>
-      <div class="problem-card reveal">
-        <span class="problem-icon">📦</span>
-        <span class="problem-tag">Gestión manual</span>
-        <p class="problem-title">Enviás stock, medidas y fotos por chat</p>
-        <p class="problem-text">Stock, talles, medidas, fotos: todo por chat. Eso significa perder tiempo valioso todos los días sin ningún sistema.</p>
-      </div>
-      <div class="problem-card reveal">
-        <span class="problem-icon">🛒</span>
-        <span class="problem-tag">Ventas perdidas</span>
-        <p class="problem-title">El cliente pregunta precio y desaparece</p>
-        <p class="problem-text">Cuando el proceso de compra no es claro, el cliente duda, no confía y abandona. Ventas perdidas por falta de una tienda clara.</p>
-      </div>
-      <div class="problem-card wide reveal">
-        <div>
-          <span class="problem-icon">💸</span>
-          <span class="problem-tag">Caos operativo</span>
-          <p class="problem-title">El caos de las transferencias y datos copiados a mano</p>
-          <p class="problem-text">Nombre, dirección, código postal — copiados desde WhatsApp. Un error puede significar un paquete devuelto y un cliente enojado.</p>
-        </div>
-        <div class="problem-detail">
-          <p class="detail-label">Proceso típico</p>
-          <div class="detail-step"><span class="step-num">1</span>Cliente manda comprobante</div>
-          <div class="detail-step"><span class="step-num">2</span>Revisás home banking</div>
-          <div class="detail-step"><span class="step-num">3</span>Confirmás manualmente</div>
-          <div class="detail-step"><span class="step-num">4</span>Anotás el pedido a mano</div>
-          <div class="detail-step"><span class="step-num">!</span><span style="color:#dc2626;font-weight:500;">Todo depende de vos.</span></div>
-        </div>
-      </div>
-      <div class="problem-card reveal">
-        <span class="problem-icon">😕</span>
-        <span class="problem-tag">Imagen</span>
-        <p class="problem-title">Tu negocio parece menos profesional</p>
-        <p class="problem-text">Mientras otros tienen catálogo ordenado y pagos online, muchos siguen vendiendo solo por Instagram. Eso genera desconfianza.</p>
-      </div>
+    <div class="pricing-card featured reveal reveal-delay-1">
+      <div class="pricing-badge">MÁS POPULAR</div>
+      <div class="pricing-plan">Sitio Corporativo</div>
+      <div class="pricing-price"><sup>$</sup>350</div>
+      <p class="pricing-note">Pago único · Cuotas disponibles</p>
+      <ul class="pricing-features"><li>Hasta 5 secciones</li><li>Diseño premium personalizado</li><li>Autogestionable</li><li>100% Responsive</li><li>SEO básico incluido</li><li>Chat con IA integrado</li><li>Formulario + WhatsApp</li></ul>
+      <a href="https://walink.co/ys0kmz" class="pricing-cta pricing-cta-solid">Quiero este plan</a>
+    </div>
+    <div class="pricing-card reveal reveal-delay-2">
+      <div class="pricing-plan">Tienda Online</div>
+      <div class="pricing-price"><sup>$</sup>600</div>
+      <p class="pricing-note">Pago único · Cuotas disponibles</p>
+      <ul class="pricing-features"><li>Todo del plan Corporativo</li><li>Catálogo de productos</li><li>Gestión de stock</li><li>Carrito de compras</li><li>Pagos online integrados</li><li>Gestión de pedidos y envíos</li><li>Chat con IA para consultas</li></ul>
+      <a href="https://walink.co/nwh8kb" class="pricing-cta pricing-cta-outline">Quiero este plan</a>
     </div>
   </div>
 </section>
 
-<!-- 3. PROBLEMAS SERVICIOS -->
-<section id="servicios" class="problems-section">
-  <div class="container">
-    <div class="section-header">
-      <p class="label">Negocios de servicios</p>
-      <h2>Si ofrecés servicios,<br><em>dependés demasiado de mensajes.</em></h2>
-      <p class="section-desc">Sin una web clara, tu negocio queda atado a tu disponibilidad permanente. Cada consulta nueva empieza desde cero.</p>
-    </div>
-    <div class="problems-grid">
-      <div class="problem-card reveal">
-        <span class="problem-icon">🔄</span>
-        <span class="problem-tag">Repetición</span>
-        <p class="problem-title">Explicás tu negocio todo el tiempo</p>
-        <p class="problem-text">Cada cliente pregunta qué hacés, cuánto cuesta y cómo trabajás. Terminás repitiendo lo mismo constantemente.</p>
-        <div class="problem-quote">"¿Qué incluye?" · "¿Cómo funciona?" · "¿Cuánto sale?"</div>
-      </div>
-      <div class="problem-card reveal">
-        <span class="problem-icon">👀</span>
-        <span class="problem-tag">Presencia</span>
-        <p class="problem-title">Sin presencia profesional, perdés frente a la competencia</p>
-        <p class="problem-text">Si solo tenés redes sociales, parecés menos serio. No generás la confianza suficiente y el cliente elige a otro que sí tiene web.</p>
-      </div>
-      <div class="problem-card reveal">
-        <span class="problem-icon">🗂️</span>
-        <span class="problem-tag">Dispersión</span>
-        <p class="problem-title">No hay un lugar claro para mostrar lo que hacés</p>
-        <p class="problem-text">Servicios, trabajos realizados, contacto: todo disperso en distintas redes. El cliente no entiende rápido cómo contratarte.</p>
-      </div>
-      <div class="problem-card wide reveal">
-        <div>
-          <span class="problem-icon">⏰</span>
-          <span class="problem-tag">Dependencia total</span>
-          <p class="problem-title">Si no respondés rápido, el cliente se va</p>
-          <p class="problem-text">El negocio queda atado a tu disponibilidad permanente. No podés desconectarte, salir de vacaciones ni descansar sin perder clientes potenciales.</p>
-        </div>
-        <div class="problem-detail">
-          <p class="detail-label">El ciclo que se repite</p>
-          <div class="detail-step"><span class="step-num">1</span>Cliente nuevo te escribe por Instagram</div>
-          <div class="detail-step"><span class="step-num">2</span>Pregunta qué hacés y cuánto sale</div>
-          <div class="detail-step"><span class="step-num">3</span>No respondés en la hora</div>
-          <div class="detail-step"><span class="step-num">4</span>El cliente se va con otro</div>
-          <div class="detail-step"><span class="step-num">!</span><span style="color:#dc2626;font-weight:500;">Venta perdida. Sin haberlo intentado.</span></div>
-        </div>
-      </div>
-      <div class="problem-card reveal">
-        <span class="problem-icon">📉</span>
-        <span class="problem-tag">Conversión</span>
-        <p class="problem-title">No convertís visitas en clientes</p>
-        <p class="problem-text">Sin un lugar claro para actuar, los interesados no saben cómo avanzar. El impulso de compra se pierde antes de que puedan contactarte.</p>
-      </div>
-    </div>
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <p class="section-label reveal" style="text-align:center;">FAQ</p>
+  <h2 class="section-title reveal" style="text-align:center;">Todo lo que necesitás<br><em>saber.</em></h2>
+  <div class="faq-list">
+    <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">¿En cuánto tiempo está lista la web?<span class="faq-icon">+</span></div><div class="faq-answer"><div class="faq-answer-inner">El tiempo promedio de entrega es de 7 días hábiles desde que arrancamos. Proyectos más complejos como tiendas online pueden tomar entre 10 y 14 días.</div></div></div>
+    <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">¿El hosting y dominio están incluidos?<span class="faq-icon">+</span></div><div class="faq-answer"><div class="faq-answer-inner">El desarrollo incluye la configuración completa. El hosting y dominio tienen un costo anual separado que acordamos al inicio del proyecto. Te guiamos en todo el proceso.</div></div></div>
+    <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">¿La web es autogestionable?<span class="faq-icon">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Sí. El sitio es autoadministrable, podés editar textos e imágenes vos mismo. Para cambios de diseño o nuevas secciones, coordinamos según el alcance.</div></div></div>
+    <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">¿Cómo funciona el chat con IA?<span class="faq-icon">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Integramos un asistente entrenado con la información de tu negocio: productos, servicios, precios y preguntas frecuentes. Responde automáticamente las 24 horas.</div></div></div>
+    <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">¿Trabajás solo en Argentina?<span class="faq-icon">+</span></div><div class="faq-answer"><div class="faq-answer-inner">No, trabajamos 100% remoto con negocios de toda Latinoamérica. El proceso completo se hace por videollamada, WhatsApp y correo.</div></div></div>
+    <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)">¿Hay cuotas disponibles?<span class="faq-icon">+</span></div><div class="faq-answer"><div class="faq-answer-inner">Sí, ofrecemos opciones de pago en cuotas. Lo coordinamos al inicio según el proyecto. También aceptamos transferencia, tarjeta y otros métodos según el país.</div></div></div>
   </div>
 </section>
 
-<!-- 4. SOLUCIÓN -->
-<section id="solucion">
-  <div class="container">
-    <div class="solution-grid">
-      <div class="solution-text">
-        <p class="label">La solución</p>
-        <h2>Un sitio web puede organizar y <em>automatizar</em> tu negocio.</h2>
-        <p>Creamos sistemas web que centralizan información, automatizan ventas o consultas y muestran tu negocio profesionalmente. Funcionan las 24 horas, incluso cuando no estás.</p>
-        <div class="solution-features">
-          <div class="sol-feature reveal"><div class="sol-icon">🤖</div><div><p class="sol-title">IA para consultas automáticas</p><p class="sol-desc">Tu web responde preguntas frecuentes, explica servicios y guía al cliente — incluso fuera de horario.</p></div></div>
-          <div class="sol-feature reveal"><div class="sol-icon">🛒</div><div><p class="sol-title">Ventas sin depender de WhatsApp</p><p class="sol-desc">Catálogo, carrito, pagos y gestión de pedidos totalmente integrados.</p></div></div>
-          <div class="sol-feature reveal"><div class="sol-icon">⚙️</div><div><p class="sol-title">Sitio autoadministrable</p><p class="sol-desc">Actualizá tu contenido vos mismo, sin depender de un técnico.</p></div></div>
-          <div class="sol-feature reveal"><div class="sol-icon">📱</div><div><p class="sol-title">100% Responsive</p><p class="sol-desc">Experiencia perfecta en celular, tablet y computadora. Garantizado.</p></div></div>
-        </div>
-      </div>
-      <div>
-        <div class="ai-card">
-          <div class="ai-header">
-            <div class="ai-dot"></div>
-            <span class="ai-label">Asistente IA activo</span>
-          </div>
-          <div class="chat-messages">
-            <div class="msg msg-user">Hola, ¿tienen el modelo en talle M?</div>
-            <div class="msg msg-bot">¡Hola! Sí, tenemos stock en talle M. El precio es $18.990. ¿Lo agregamos al carrito? 🛍️</div>
-            <div class="msg msg-user">¿Hacen envíos a Córdoba?</div>
-            <div class="msg msg-bot">¡Claro! Enviamos a todo el país. El costo se calcula al finalizar la compra 📦</div>
-          </div>
-          <div class="chat-metrics">
-            <div class="metric"><span class="metric-val">97%</span><span class="metric-lbl">Consultas resueltas</span></div>
-            <div class="metric"><span class="metric-val">24/7</span><span class="metric-lbl">Disponibilidad</span></div>
-            <div class="metric"><span class="metric-val">0s</span><span class="metric-lbl">Tiempo espera</span></div>
-          </div>
-        </div>
-        <div class="type-cards">
-          <div class="type-card"><p class="type-name">Sitio Corporativo</p><p class="type-desc">Ideal para servicios. Presencia profesional y consultas automatizadas.</p></div>
-          <div class="type-card accent"><p class="type-name">Tienda Online</p><p class="type-desc">Catálogo, pagos y pedidos integrados. Comprá sin WhatsApp.</p></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="process-grid">
-      <div class="proc-step reveal"><div class="proc-icon">🎯</div><p class="proc-title">Analizamos tu negocio</p><p class="proc-desc">Entendemos tus objetivos y definimos la estructura ideal.</p></div>
-      <div class="proc-step reveal"><div class="proc-icon">🎨</div><p class="proc-title">Diseñamos la estructura</p><p class="proc-desc">Diseño único, pensado para convertir visitantes en clientes.</p></div>
-      <div class="proc-step reveal"><div class="proc-icon">⚡</div><p class="proc-title">Desarrollamos el sitio</p><p class="proc-desc">Rápido, responsive y con toda la tecnología integrada.</p></div>
-      <div class="proc-step reveal"><div class="proc-icon">🚀</div><p class="proc-title">Lanzamos tu sistema</p><p class="proc-desc">Tu web online y lista para atraer clientes desde el día uno.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 6. PORTFOLIO -->
-<section id="portfolio">
-  <div class="container">
-    <div class="section-header">
-      <p class="label">Proyectos recientes</p>
-      <h2>Trabajos que hablan <em>por sí solos.</em></h2>
-      <p class="section-desc">Cada sitio es único, pensado desde cero para el negocio y la audiencia del cliente.</p>
-    </div>
-    <div class="portfolio-grid">
-      <a href="https://invox-ai.com/" target="_blank" class="portfolio-card reveal">
-        <div class="portfolio-thumb portfolio-thumb-img">
-          <img src="source/invoxnuevo.jpg" alt="InvoxSoluciones" />
-          <span class="portfolio-thumb-label">Landing Page · IA</span>
-        </div>
-        <div class="portfolio-body">
-          <span class="portfolio-tag">Inteligencia Artificial</span>
-          <p class="portfolio-name">InvoxSoluciones</p>
-          <p class="portfolio-desc">Landing page para empresa de soluciones con IA. Diseño oscuro, moderno y orientado a conversión.</p>
-          <span class="portfolio-link">Ver sitio ↗</span>
-        </div>
-      </a>
-      <a href="https://bmconstructora.com/" target="_blank" class="portfolio-card reveal">
-        <div class="portfolio-thumb portfolio-thumb-img">
-          <img src="source/bmnuevo.jpg" alt="BMConstructora" />
-          <span class="portfolio-thumb-label">Institucional · Construcción</span>
-        </div>
-        <div class="portfolio-body">
-          <span class="portfolio-tag">Sitio Corporativo</span>
-          <p class="portfolio-name">BMConstructora</p>
-          <p class="portfolio-desc">Sitio institucional para constructora. Presencia profesional, servicios y contacto integrados.</p>
-          <span class="portfolio-link">Ver sitio ↗</span>
-        </div>
-      </a>
-      <a href="https://lino35.mitiendanube.com/" target="_blank" class="portfolio-card reveal">
-        <div class="portfolio-thumb portfolio-thumb-img">
-          <img src="source/linnonuevo.jpg" alt="Linno" />
-          <span class="portfolio-thumb-label">Tienda Online · Moda</span>
-        </div>
-        <div class="portfolio-body">
-          <span class="portfolio-tag">E-commerce</span>
-          <p class="portfolio-name">Linno</p>
-          <p class="portfolio-desc">Tienda online de moda con catálogo, carrito y pagos integrados. Vende sin depender de WhatsApp.</p>
-          <span class="portfolio-link">Ver sitio ↗</span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- 7. TESTIMONIOS -->
-<section id="testimonios">
-  <div class="container">
-    <div class="section-header">
-      <p class="label">Clientes reales</p>
-      <h2>Lo que dicen los que <em>ya confiaron.</em></h2>
-      <p class="section-desc">Negocios que decidieron dar el paso y organizaron su presencia online con StudioLav.</p>
-    </div>
-    <div class="testimonios-grid">
-      <div class="testi-card reveal">
-        <div class="testi-card-text">
-          <div class="testi-stars">★★★★★</div>
-          <p class="testi-text">"En menos de 3 días se interpretó perfectamente lo que necesitaba para la web. Rápido, preciso y al punto."</p>
-          <div class="testi-author">
-            <div class="testi-avatar">F</div>
-            <div><p class="testi-source">Franco</p><p class="testi-role">CEO · Linno</p></div>
-          </div>
-        </div>
-        <div class="testi-video">
-          <iframe src="https://www.youtube.com/embed/ZdkzXJZggkU" title="Reseña Franco — Linno" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="testi-card reveal">
-        <div class="testi-card-text">
-          <div class="testi-stars">★★★★★</div>
-          <p class="testi-text">"Hizo lo que le pedí a medida, todo lo que le pedí lo cumplió. Muy buena experiencia de principio a fin."</p>
-          <div class="testi-author">
-            <div class="testi-avatar">G</div>
-            <div><p class="testi-source">Gustavo Rodriguez</p><p class="testi-role">InvoxSoluciones con IA</p></div>
-          </div>
-        </div>
-        <div class="testi-video">
-          <iframe src="https://www.youtube.com/embed/hIm65UQ195I" title="Reseña Gustavo — InvoxSoluciones" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div><!-- end testimonios-grid -->
-    <div class="testi-card testi-card-text-only reveal">
-      <div class="testi-avatar testi-avatar-lg">L</div>
-      <div class="testi-card-text">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Quiero recomendar el trabajo de Valentín, porque tuve una excelente experiencia. Siempre fue muy atento, responsable y comprometido con cada detalle. Supo entender perfectamente lo que necesitaba: una web funcional, atractiva y alineada con la identidad de mi empresa. Logró superar todas mis expectativas."</p>
-        <div class="testi-author" style="border-top:none; padding-top:0;">
-          <div><p class="testi-source">Lilia Puma</p><p class="testi-role">CEO · BMConstructora</p></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 8. PRECIOS -->
-<section id="precios">
-  <div class="container">
-    <div class="section-header">
-      <p class="label">Precios</p>
-      <h2>Planes para cada <em>negocio.</em></h2>
-      <p class="section-desc">Todos los precios en USD · Cuotas disponibles · Pago único</p>
-    </div>
-
-    <div class="pricing-cards">
-      <div class="pricing-card reveal">
-        <p class="pricing-tier">Para servicios</p>
-        <p class="pricing-name">Sitio Corporativo</p>
-        <p class="pricing-desc">Presencia profesional completa con IA para automatizar consultas de tus clientes.</p>
-        <div class="pricing-price"><span class="price-cur">USD</span><span class="price-num">350</span></div>
-        <p class="price-note">Pago único · Cuotas disponibles</p>
-        <div class="pricing-divider"></div>
-        <ul class="pricing-features">
-          <li><span class="feat-check">✔</span>Hasta 5 secciones</li>
-          <li><span class="feat-check">✔</span>Diseño premium personalizado</li>
-          <li><span class="feat-check">✔</span>Autogestionable</li>
-          <li><span class="feat-check">✔</span>100% Responsive</li>
-          <li><span class="feat-check">✔</span>SEO básico incluido</li>
-          <li><span class="feat-check">✔</span>Chat con inteligencia artificial</li>
-          <li><span class="feat-check">✔</span>Página de servicios + contacto</li>
-          <li><span class="feat-dash">—</span><span style="color:var(--text-dim)">Tienda online</span></li>
-        </ul>
-        <a href="https://walink.co/uqzyjy" target="_blank" class="pricing-btn pricing-btn-outline">Quiero este plan →</a>
-      </div>
-
-      <div class="pricing-card featured reveal">
-        <p class="pricing-tier">Para productos</p>
-        <p class="pricing-name">Tienda Online</p>
-        <p class="pricing-desc">Tienda completa con catálogo, pagos y IA integrada. Vendé sin depender de WhatsApp.</p>
-        <div class="pricing-price"><span class="price-cur">USD</span><span class="price-num">600</span></div>
-        <p class="price-note">Pago único · Cuotas disponibles</p>
-        <div class="pricing-divider"></div>
-        <ul class="pricing-features">
-          <li><span class="feat-check">✔</span>Todo del plan Corporativo</li>
-          <li><span class="feat-check">✔</span>Catálogo de productos</li>
-          <li><span class="feat-check">✔</span>Gestión de stock</li>
-          <li><span class="feat-check">✔</span>Carrito de compras</li>
-          <li><span class="feat-check">✔</span>Pagos online integrados</li>
-          <li><span class="feat-check">✔</span>Gestión de pedidos y envíos</li>
-          <li><span class="feat-check">✔</span>Chat con IA para consultas</li>
-        </ul>
-        <a href="https://walink.co/nwh8kb" target="_blank" class="pricing-btn pricing-btn-filled">Quiero este plan →</a>
-      </div>
-    </div>
-
-    <div class="comparison-table">
-      <div class="comp-header">
-        <span>Funcionalidad</span>
-        <span>Corporativo</span>
-        <span>Tienda</span>
-      </div>
-      <div class="comp-row"><span class="comp-feature">Mostrar servicios o info del negocio</span><span class="comp-check">✔</span><span class="comp-check">✔</span></div>
-      <div class="comp-row"><span class="comp-feature">Chat con inteligencia artificial</span><span class="comp-check">✔</span><span class="comp-check">✔</span></div>
-      <div class="comp-row"><span class="comp-feature">Sitio autoadministrable</span><span class="comp-check">✔</span><span class="comp-check">✔</span></div>
-      <div class="comp-row"><span class="comp-feature">100% Responsive</span><span class="comp-check">✔</span><span class="comp-check">✔</span></div>
-      <div class="comp-row"><span class="comp-feature">Catálogo de productos</span><span class="comp-dash">—</span><span class="comp-check">✔</span></div>
-      <div class="comp-row"><span class="comp-feature">Carrito de compras</span><span class="comp-dash">—</span><span class="comp-check">✔</span></div>
-      <div class="comp-row"><span class="comp-feature">Pagos online</span><span class="comp-dash">—</span><span class="comp-check">✔</span></div>
-      <div class="comp-row"><span class="comp-feature">Gestión de pedidos y envíos</span><span class="comp-dash">—</span><span class="comp-check">✔</span></div>
-    </div>
-  </div>
-</section>
-
-
-<!-- 9. FAQ -->
-<section id="faq">
-  <div class="container">
-    <div class="section-header">
-      <p class="label">Preguntas frecuentes</p>
-      <h2>Todo lo que necesitás <em>saber.</em></h2>
-      <p class="section-desc">Respondemos las dudas más comunes antes de que las tengas.</p>
-    </div>
-    <div class="faq-grid">
-      <div class="faq-item">
-        <button class="faq-q">¿Cuánto tarda en estar lista la web?<span class="faq-arrow">+</span></button>
-        <div class="faq-a">El tiempo promedio de entrega es de 7 días hábiles desde que arrancamos. Proyectos más complejos como tiendas online pueden tomar entre 10 y 14 días.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">¿El hosting y dominio están incluidos?<span class="faq-arrow">+</span></button>
-        <div class="faq-a">El desarrollo incluye la configuración completa. El hosting y dominio tienen un costo anual separado que acordamos al inicio del proyecto. Te guiamos en todo el proceso.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">¿Puedo pedir cambios después de lanzar?<span class="faq-arrow">+</span></button>
-        <div class="faq-a">Sí. El sitio es autoadministrable, podés editar textos e imágenes vos mismo. Para cambios de diseño o nuevas secciones, coordinamos según el alcance.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">¿Cómo funciona el chat con IA?<span class="faq-arrow">+</span></button>
-        <div class="faq-a">Integramos un asistente entrenado con la información de tu negocio: productos, servicios, precios y preguntas frecuentes. Responde automáticamente las 24 horas.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">¿Trabajan solo en Argentina?<span class="faq-arrow">+</span></button>
-        <div class="faq-a">No, trabajamos 100% remoto con negocios de toda Latinoamérica. El proceso completo se hace por videollamada, WhatsApp y correo.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">¿Hay cuotas disponibles?<span class="faq-arrow">+</span></button>
-        <div class="faq-a">Sí, ofrecemos opciones de pago en cuotas. Lo coordinamos al inicio según el proyecto. También aceptamos transferencia, tarjeta y otros métodos según el país.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- 10. CTA FINAL -->
-<section id="cta">
-  <div class="container">
-    <div class="cta-inner">
-      <div class="cta-left">
-        <p class="label">Empezá hoy</p>
-        <h2>Tu negocio no debería<br>depender <em>solo de mensajes.</em></h2>
-        <p>Un sitio web bien hecho organiza tus ventas, automatiza consultas y muestra tu marca las 24 horas.</p>
-      </div>
-      <div class="cta-right">
-        <div class="cta-buttons">
-          <a href="https://walink.co/95pea6" target="_blank" class="btn-primary btn-large">Solicitar mi web →</a>
-          <a href="#precios" class="btn-secondary">Ver precios</a>
-        </div>
-        <div class="cta-trust">
-          <div class="trust-item"><span class="trust-icon">⚡</span>Respuesta en 24hs</div>
-          <div class="trust-item"><span class="trust-icon">🌍</span>100% remoto</div>
-          <div class="trust-item"><span class="trust-icon">✅</span>+50 proyectos</div>
-        </div>
-      </div>
-    </div>
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Tu negocio no debería<br>depender <em>solo de mensajes.</em></h2>
+  <p>Un sitio web bien hecho organiza tus ventas, automatiza consultas y muestra tu marca las 24 horas.</p>
+  <a href="https://walink.co/95pea6" class="btn-primary" style="font-size:16px;padding:18px 40px;background:var(--accent);color:var(--white);">Solicitar mi web →</a>
+  <div class="cta-badges">
+    <span class="cta-badge">⚡ Respuesta en 24hs</span>
+    <span class="cta-badge">🌍 100% remoto</span>
+    <span class="cta-badge">✅ +50 proyectos</span>
+    <span class="cta-badge">🤖 IA integrada</span>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-main">
-    <div class="container footer-grid">
-
-      <!-- Brand -->
-      <div class="footer-brand">
-        <img src="source/logostudiolav.png" alt="StudioLav" class="footer-logo-img" />
-        <p class="footer-tagline">Sitios web profesionales que organizan, automatizan y venden.</p>
-        <div class="footer-socials">
-          <a href="https://www.instagram.com/studio.lavv/" target="_blank" class="social-icon" title="Instagram">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-          </a>
-          <a href="https://www.tiktok.com/@valennweb" target="_blank" class="social-icon" title="TikTok">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.28 8.28 0 004.84 1.56V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
-          </a>
-          <a href="https://walink.co/95pea6" target="_blank" class="social-icon" title="WhatsApp">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Nav -->
-      <div>
-        <p class="footer-col-title">Navegación</p>
-        <div class="footer-nav-links">
-          <a href="#tiendas">Problemas de tiendas</a>
-          <a href="#servicios">Problemas de servicios</a>
-          <a href="#solucion">Cómo lo solucionamos</a>
-          <a href="#portfolio">Proyectos</a>
-          <a href="#testimonios">Reseñas</a>
-          <a href="#precios">Precios</a>
-          <a href="#faq">Preguntas frecuentes</a>
-        </div>
-      </div>
-
-      <!-- Contact -->
-      <div class="footer-contact-col">
-        <p class="footer-col-title">Contacto</p>
-        <a href="https://walink.co/95pea6" target="_blank" class="footer-wsp">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Escribinos por WhatsApp
-        </a>
-        <p class="footer-contact-note">Respondemos en menos de 24hs hábiles.<br>Lunes a Sábado.</p>
-      </div>
-
-    </div>
+  <div>
+    <div class="footer-brand-name">STUDIOLAV</div>
+    <p class="footer-tagline">Sitios web profesionales que organizan, automatizan y venden. Hecho con ♥ en Argentina.</p>
   </div>
-  <div class="footer-bottom">
-    <div class="container footer-bottom-inner">
-      <span class="footer-copy">© 2026 StudioLav. Todos los derechos reservados.</span>
-      <span class="footer-made">Hecho con <span>♥</span> en Argentina</span>
-    </div>
+  <div>
+    <div class="footer-col-title">Navegación</div>
+    <ul class="footer-links">
+      <li><a href="#portfolio">Proyectos</a></li>
+      <li><a href="#process">Proceso</a></li>
+      <li><a href="#services">Servicios</a></li>
+      <li><a href="#pricing">Precios</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="footer-col-title">Contacto</div>
+    <ul class="footer-links"><li><a href="https://walink.co/95pea6">WhatsApp</a></li></ul>
+    <p style="font-size:13px;color:var(--text-muted);margin-top:14px;line-height:1.65;">Respondemos en menos de 24hs hábiles.<br>Lunes a Sábado.</p>
+  </div>
+  <div class="footer-copy">
+    <span>© 2026 StudioLav. Todos los derechos reservados.</span>
+    <span>Hecho con ♥ en Argentina</span>
   </div>
 </footer>
 <script src="script.js"></script>
