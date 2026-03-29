@@ -242,11 +242,11 @@ footer { background:var(--white); padding:clamp(40px,6vw,60px) clamp(20px,5vw,60
 .footer-copy { grid-column:1/-1; padding-top:32px; border-top:1px solid var(--border); font-size:13px; color:var(--text-muted); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; }
 
 /* REVEAL */
-.reveal { opacity:0; transform:translateY(28px); transition:opacity 0.65s cubic-bezier(0.25,0.46,0.45,0.94),transform 0.65s cubic-bezier(0.25,0.46,0.45,0.94); }
+.reveal { opacity:0; transform:translateY(28px); transition:opacity 0.8s cubic-bezier(0.25,0.46,0.45,0.94), transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94); will-change:opacity,transform; }
 .reveal.visible { opacity:1; transform:translateY(0); }
-.reveal-delay-1 { transition-delay:0.08s; }
-.reveal-delay-2 { transition-delay:0.16s; }
-.reveal-delay-3 { transition-delay:0.24s; }
+.reveal-delay-1 { transition-delay:0.12s; }
+.reveal-delay-2 { transition-delay:0.24s; }
+.reveal-delay-3 { transition-delay:0.36s; }
 
 /* RESPONSIVE — tablet ≤ 1024px */
 @media (max-width:1024px) {
