@@ -24,24 +24,33 @@ const ro = new IntersectionObserver((entries) => {
 }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
 document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
-/* Parallax effect on scroll */
-window.addEventListener('scroll', () => {
-  const scrolled = window.pageYOffset;
-  const parallaxElements = document.querySelectorAll('[data-parallax]');
-  
-  parallaxElements.forEach(el => {
-    const speed = el.getAttribute('data-parallax') || 0.5;
-    const yPos = scrolled * speed;
-    el.style.transform = `translateY(${yPos}px)`;
-  });
+/* Smooth Mouse Wheel Scroll */
+let currentScroll = 0;
+let targetScroll = 0;
+let isScrolling = false;
 
-  /* Subtle scale effect for hero */
-  const hero = document.querySelector('.hero');
-  if (hero && scrolled < window.innerHeight) {
-    const scale = 1 - (scrolled / window.innerHeight) * 0.05;
-    hero.style.opacity = Math.max(0.7, 1 - (scrolled / window.innerHeight) * 0.3);
+function smoothScroll() {
+  currentScroll += (targetScroll - currentScroll) * 0.08;
+  
+  if (Math.abs(targetScroll - currentScroll) > 0.5) {
+    window.scrollTo(0, currentScroll);
+    isScrolling = true;
+    requestAnimationFrame(smoothScroll);
+  } else {
+    currentScroll = targetScroll;
+    isScrolling = false;
   }
-}, { passive: true });
+}
+
+window.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  targetScroll = Math.max(0, Math.min(targetScroll + e.deltaY, document.documentElement.scrollHeight - window.innerHeight));
+  
+  if (!isScrolling) {
+    currentScroll = window.scrollY;
+    smoothScroll();
+  }
+}, { passive: false });
 
 /* Smooth scroll with nav offset */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
