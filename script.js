@@ -1,64 +1,35 @@
-/* Burger */
-const burger = document.getElementById('burger');
-const mobileMenu = document.getElementById('nav-mobile');
-burger.addEventListener('click', () => {
-  burger.classList.toggle('open');
-  mobileMenu.classList.toggle('open');
-});
-function closeMobile() {
-  burger.classList.remove('open');
-  mobileMenu.classList.remove('open');
-}
-
-/* FAQ */
-function toggleFaq(el) {
-  const item = el.closest('.faq-item');
-  const isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-  if (!isOpen) item.classList.add('open');
-}
-
-/* Scroll reveal */
-const ro = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); } });
-}, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
-document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
-
-/* Smooth scroll with nav offset */
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const id = a.getAttribute('href');
-    if (id === '#') return;
-    const target = document.querySelector(id);
-    if (target) {
-      e.preventDefault();
-      const offset = document.getElementById('nav').offsetHeight + 16;
-      window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
-      closeMobile();
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  // Cerrar menú mobile al hacer click en un link
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+  // Animación de aparición al hacer scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
     }
   });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('section, nav, .proj-card, .ben, .diff-card, .price-card, .stat-box, .vid-card, .sol-box, h1, h2, h3, p, .hero-badge, .hero-btns, .sec-hdr, .bens, .stat-row, footer').forEach((el, i) => {
+  el.style.animationDelay = `${(i % 5) * 0.07}s`;
+  el.classList.add('anim');
+  observer.observe(el);
 });
-
-/* Nav shrink on scroll */
-window.addEventListener('scroll', () => {
-  document.getElementById('nav').style.padding =
-    window.scrollY > 60
-      ? `12px clamp(20px,5vw,60px)`
-      : `18px clamp(20px,5vw,60px)`;
-}, { passive: true });
-
-/* Video modal */
-function openVideo(src) {
-  document.getElementById('video-iframe').src = src;
-  document.getElementById('video-modal').classList.add('open');
-  document.body.style.overflow = 'hidden';
+function toggleVideo(card) {
+  const video = card.querySelector('video');
+  const btn = card.querySelector('.vid-btn');
+  if (video.paused) {
+    video.play();
+    card.classList.add('playing');
+    btn.textContent = '⏸';
+  } else {
+    video.pause();
+    card.classList.remove('playing');
+    btn.textContent = '▶';
+  }
 }
-function closeVideo() {
-  document.getElementById('video-modal').classList.remove('open');
-  document.getElementById('video-iframe').src = '';
-  document.body.style.overflow = '';
-}
-function closeVideoOnOverlay(e) {
-  if (e.target === document.getElementById('video-modal')) closeVideo();
-}
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeVideo(); });
