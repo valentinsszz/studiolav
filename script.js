@@ -26,10 +26,10 @@ function toggleVideo(card) {
   if (video.paused) {
     video.play();
     card.classList.add('playing');
-    btn.textContent = '⏸';
+    btn.classList.add('playing');
   } else {
     video.pause();
     card.classList.remove('playing');
-    btn.textContent = '▶';
+    btn.classList.remove('playing');
   }
 }
