@@ -41,7 +41,7 @@ nav {
   display: flex; justify-content: space-between; align-items: center;
   padding: 18px var(--px); max-width: var(--wrap); margin: 0 auto;
 }
-.nav-logo { font-size: 20px; font-weight: 800; letter-spacing: -0.5px; }
+.nav-logo { font-size: 20px; font-weight: 800; letter-spacing: -0.5px; text-decoration: none; color: inherit; }
 .nav-logo span { color: var(--blue); }
 .nav-links { display: flex; gap: 32px; font-size: 14px; color: #555; font-weight: 500; }
 .nav-links a { text-decoration: none; color: inherit; transition: color 0.15s; }
