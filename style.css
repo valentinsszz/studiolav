@@ -380,8 +380,8 @@ footer { background: #0a0a0a; }
   .white-inner { grid-template-columns: 1fr; }
   .bens { grid-template-columns: 1fr; }
   .pgrid-3 { grid-template-columns: 1fr; }
-  .vids-grid { grid-template-columns: 1fr; max-width: 280px; }
-  .vid-card { max-height: 440px; }
+  .vids-grid { grid-template-columns: 1fr; max-width: 100%; margin: 0 auto; }
+  .vid-card { max-height: 520px; }
   .diff-grid { grid-template-columns: 1fr; max-width: 100%; }
   .prices-grid { grid-template-columns: 1fr; max-width: 100%; }
   .foot-inner { flex-direction: column; gap: 8px; text-align: center; }
